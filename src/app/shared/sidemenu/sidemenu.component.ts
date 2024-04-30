@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { routes } from '../../app.routes';  // se importan las rutas
+import { RouterModule } from '@angular/router';
 
 @Component({
  selector: 'app-sidemenu',
  standalone: true,
+ imports: [RouterModule],   // se hacen las importaciones debido a que es un Standalone Component
  templateUrl: './sidemenu.component.html',
  styleUrls: ['./sidemenu.component.css']
 })
