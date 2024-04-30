@@ -2,6 +2,13 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+
+    // estos son ALIAs para los paths mas importantes
+    "paths": {
+      "@shared/*": ["./src/app/shared/*"],
+      "@interfaces/*": ["./src/app/interfaces/*"],
+      "@services/*": ["./src/app/services/*"]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
