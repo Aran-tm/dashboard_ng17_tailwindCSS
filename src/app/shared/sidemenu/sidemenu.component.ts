@@ -8,15 +8,30 @@ import { routes } from '../../app.routes';  // se importan las rutas
  styleUrls: ['./sidemenu.component.css']
 })
 export class SidemenuComponent implements OnInit {
-  constructor() {
-    const dashboardRoutes = routes.
-      map(
-        route => route.children ?? []
-    ).flat()    // concatena todos los sub arrays
 
-    // muestro por consola todas las rutas de mi aplicacion
-    console.log(dashboardRoutes);
+  public menuItems = routes
+    .map(
+      route => route.children ?? []
+    )
+    .flat()
+    .filter(route => route && route.path)
+    .filter(route => !route.path?.includes(':'));
+
+
+  constructor() {
+
+    // concatena todos los sub arrays
+    // const dashboardRoutes = routes.
+    //   map(
+    //     route => route.children ?? []
+    // )
+    //   .flat()
+    //   .filter( route => route && route.path )
+    //   .filter( route => !route.path?.includes(':') )
+
+    // // muestro por consola todas las rutas de mi aplicacion
+    // console.log(dashboardRoutes);
   }
- ngOnInit() {
- }
+  ngOnInit() {
+  }
 }
