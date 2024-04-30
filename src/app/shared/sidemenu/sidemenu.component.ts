@@ -16,7 +16,7 @@ export class SidemenuComponent implements OnInit {
       route => route.children ?? []
     )
     .flat()
-    .filter(route => route && route.path)
+    .filter(route => route && route.path && !route.path.includes('**'))
     .filter(route => !route.path?.includes(':'));
 
 
