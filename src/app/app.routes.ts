@@ -47,7 +47,8 @@ export const routes: Routes = [
         path: '**',
         component: PageNotFoundComponent,  // Wildcard route for a 404 page
       } */
-      { path: '', redirectTo: 'control-flow', pathMatch: 'full'}
+      // esta es la ruta comodin... Se utiliza para redireccionar hacia paginas 404
+      { path: '**', redirectTo: 'control-flow', pathMatch: 'full'}
     ]
   },
   {
