@@ -12,7 +12,7 @@ export class SidemenuComponent implements OnInit {
     const dashboardRoutes = routes.
       map(
         route => route.children ?? []
-    )
+    ).flat()    // concatena todos los sub arrays
 
     // muestro por consola todas las rutas de mi aplicacion
     console.log(dashboardRoutes);
