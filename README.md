@@ -1,4 +1,6 @@
-# MyApp
+# Simple Dashboard
+
+![Screenshot (319)](https://github.com/Aran-tm/dashboard_ng17_tailwindCSS/assets/113542332/35c18bcf-33ba-4c0a-91aa-a49253b18d7b)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
