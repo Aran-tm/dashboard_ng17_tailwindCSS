@@ -19,7 +19,6 @@ export class SidemenuComponent implements OnInit {
     .filter(route => route && route.path && !route.path.includes('**'))
     .filter(route => !route.path?.includes(':'));
 
-
   constructor() {
 
     // concatena todos los sub arrays
@@ -31,9 +30,13 @@ export class SidemenuComponent implements OnInit {
     //   .filter( route => route && route.path )
     //   .filter( route => !route.path?.includes(':') )
 
-    // // muestro por consola todas las rutas de mi aplicacion
+    // muestro por consola todas las rutas de mi aplicacion
     // console.log(dashboardRoutes);
   }
+
   ngOnInit() {
+
+    // // muestro por consola todas las rutas de mi aplicacion
+    console.log(this.menuItems);
   }
 }
