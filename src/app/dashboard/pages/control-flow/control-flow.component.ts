@@ -1,5 +1,8 @@
 import { Component, OnInit, signal } from '@angular/core';
 
+// esto es un nuevo tipo
+type Grade = 'A' | 'B' | 'F';
+
 @Component({
   selector: 'app-control-flow',
   standalone: true,
@@ -10,6 +13,7 @@ export default class ControlFlowComponent implements OnInit {
 
   // propiedades de clase
   public showContent = signal(false);
+  public grade = signal<Grade>('A');
 
   public toggleContent() {
 
