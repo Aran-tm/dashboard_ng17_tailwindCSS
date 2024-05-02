@@ -1,3 +1,5 @@
+<app-title title="Control Flow"/>
+
 <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
   <!-- *ngIf nueva sintaxis de angular seria: @if (){} -->
   <div class="shadow bg-white rounded p-10">
@@ -12,27 +14,55 @@
 
     <!-- estoy llamando a la signal como una funcion -->
     @if( showContent() ){
-      <p>Es verdadero</p>
+    <p>Es verdadero</p>
     } @else {
-      <p>Es falso</p>
+    <p>Es falso</p>
     }
   </div>
 
   <!-- *switch nueva sintaxis de angular seria: @switch () {@cases} -->
   <div class="shadow bg-white rounded p-10">
-
     <h2 class="text-3xl">{{ grade() }}</h2>
 
-    @switch (grade()) {
-      @case ('A') {
-        <p>Arriba a 90</p>
+    @switch (grade()) { @case ('A') {
+    <p>Arriba a 90</p>
+    } @case ('B') {
+    <p>Arriba a 80</p>
+    } @default {
+    <p>Reprobado</p>
+    } }
+  </div>
+
+  <!-- @for nueva sintaxis @for(){} -->
+  <div class="shadow bg-white rounded p-10">
+    <h2 class="text-3xl">Mis frameworks</h2>
+
+    <ul>
+      <!-- para obtener el valor de la signal se necesitan poner parentesis -->
+      @for (framework of frameworks(); track framework; let i = $index, first =
+      $first, last = $last, even = $even, odd = $odd, count = $count) {
+      <li
+        [class]="{
+          'bg-red-100': even && !first && !last,
+          'bg-purple-100': odd && !first && !last,
+          'bg-blue-100': first || last
+        }"
+      >
+        {{ i + 1 }}/{{ count }} - {{ framework }}
+      </li>
       }
-      @case ('B') {
-        <p>Arriba a 80</p>
+    </ul>
+  </div>
+
+  <div class="shadow bg-white rounded p-10">
+    <ul>
+      <!-- para obtener el valor de la signal se necesitan poner parentesis -->
+      @for (framework2 of frameworks2(); track $index) {
+      <li>{{ framework2 }}</li>
+      } @empty {
+      <li>No hay Frameworks agregados!</li>
+      <!-- Util para cuando no hay elementos en la signal -->
       }
-      @default {
-        <p>Reprobado</p>
-      }
-    }
+    </ul>
   </div>
 </section>

@@ -1,4 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
+import { TitleComponent } from '@shared/title/title.component';
 
 // esto es un nuevo tipo gratantizando la seguridad de tipos Grade
 type Grade = 'A' | 'B' | 'F';
@@ -7,6 +8,7 @@ type Grade = 'A' | 'B' | 'F';
 @Component({
   selector: 'app-control-flow',
   standalone: true,
+  imports: [TitleComponent],
   templateUrl: './control-flow.component.html',
   styleUrls: ['./control-flow.component.css']
 })
@@ -15,6 +17,9 @@ export default class ControlFlowComponent implements OnInit {
   // propiedades de clase
   public showContent = signal(false);
   public grade = signal<Grade>('A');
+
+  public frameworks = signal(['Angular', 'Vue', 'React', 'Svelte', 'Laravel', 'Qwik']);
+  public frameworks2 = signal([]);
 
   public toggleContent() {
 
