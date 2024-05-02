@@ -17,9 +17,22 @@
       <p>Es falso</p>
     }
   </div>
-</section>
 
-<section class="grid grid-cols-1 md:grid-cols-2 gap-3">
   <!-- *switch nueva sintaxis de angular seria: @switch () {@cases} -->
-  <div class="shadow bg-white rounded p-10"></div>
+  <div class="shadow bg-white rounded p-10">
+
+    <h2 class="text-3xl">{{ grade() }}</h2>
+
+    @switch (grade()) {
+      @case ('A') {
+        <p>Arriba a 90</p>
+      }
+      @case ('B') {
+        <p>Arriba a 80</p>
+      }
+      @default {
+        <p>Reprobado</p>
+      }
+    }
+  </div>
 </section>

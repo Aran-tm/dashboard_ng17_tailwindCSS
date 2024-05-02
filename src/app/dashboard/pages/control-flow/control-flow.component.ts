@@ -1,8 +1,9 @@
 import { Component, OnInit, signal } from '@angular/core';
 
-// esto es un nuevo tipo
+// esto es un nuevo tipo gratantizando la seguridad de tipos Grade
 type Grade = 'A' | 'B' | 'F';
 
+// define a esta clase como un componente
 @Component({
   selector: 'app-control-flow',
   standalone: true,
