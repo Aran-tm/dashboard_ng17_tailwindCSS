@@ -1,10 +1,36 @@
 <section class="grid grid-cols-1">
   @defer () {
   <!-- compontente heavy loadres slow -->
-  <app-heavy-loaders-slow />
+  <app-heavy-loaders-slow [cssClass]="'bg-blue-500'" />
   } @placeholder {
 
-    <!-- Esto mejora la experiencia de usuario -->
-    <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse"> Cargando...</p>
+  <!-- Esto mejora la experiencia de usuario -->
+  <p
+    class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse"
+  >
+    Cargando...
+  </p>
+  } @defer () {
+  <!-- compontente heavy loadres slow -->
+  <app-heavy-loaders-slow cssClass="bg-green-500" />
+  } @placeholder {
+
+  <!-- Esto mejora la experiencia de usuario -->
+  <p
+    class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse"
+  >
+    Cargando...
+  </p>
+  } @defer () {
+  <!-- compontente heavy loadres slow -->
+  <app-heavy-loaders-slow cssClass="bg-purple-500" />
+  } @placeholder {
+
+  <!-- Esto mejora la experiencia de usuario -->
+  <p
+    class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse"
+  >
+    Cargando...
+  </p>
   }
 </section>
