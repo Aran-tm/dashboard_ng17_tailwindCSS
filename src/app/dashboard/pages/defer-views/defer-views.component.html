@@ -10,7 +10,7 @@
   >
     Cargando...
   </p>
-  } @defer () {
+  } @defer (on idle) {
   <!-- compontente heavy loadres slow -->
   <app-heavy-loaders-slow cssClass="bg-green-500" />
   } @placeholder {
@@ -21,7 +21,7 @@
   >
     Cargando...
   </p>
-  } @defer () {
+  } @defer (on viewport) {
   <!-- compontente heavy loadres slow -->
   <app-heavy-loaders-slow cssClass="bg-purple-500" />
   } @placeholder {
