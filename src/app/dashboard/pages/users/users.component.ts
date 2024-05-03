@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'app-users',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export default class UsersComponent implements OnInit {
+
+  // injecto el user service en este componente
+  public usersService = inject(UserService);
 
   constructor() { }
 
