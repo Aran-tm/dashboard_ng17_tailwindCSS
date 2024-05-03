@@ -56,7 +56,7 @@
     <span>On Interaction</span>
   </app-heavy-loaders-fast>
   } @placeholder {
-  <!-- Evento que responde cuando se realiza un click en el div -->
+  <!-- Evento que se dispara inmediatamente se carga la pagina -->
   <div class="w-full h-20 bg-purple-100">Placeholder Div</div>
   }
 </section>
@@ -64,13 +64,13 @@
 <section>
   <hr class="my-2" />
 
-  <!-- este sucede nada mas que se cargue la pagina -->
+  <!-- este sucede despues de haber pasado 2 segundos -->
   @defer (on timer(2000)) {
   <app-heavy-loaders-fast cssClass="bg-green-500 h-20">
     <span>On Timer</span>
   </app-heavy-loaders-fast>
   } @placeholder {
-  <!-- Evento que responde cuando se realiza un click en el div -->
+  <!-- Evento que responde al cbo de los 2 segundos -->
   <div class="w-full h-20 bg-purple-100">2 segundos</div>
   }
 </section>
